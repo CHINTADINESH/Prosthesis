@@ -1,0 +1,32 @@
+
+Problem Statement:
+Classification problem
+
+rawData used:       data from biopatrec-Data_Repository is downloaded from https://github.com/biopatrec/biopatrec/tree/Data_Repository
+
+
+
+
+labels=             ['Open Hand', 'Close Hand', 'Flex Hand', 'Extend Hand', 'Pronation', 'Supination', 'Side Grip', 'Fine Grip', 'Agree', 'Pointer']
+
+
+classifier :        simple feed forward neural network
+
+
+input:              rough entrophy, corelation between two channels, zero crossings
+
+Network structure : input->14,hidden->28,output->10
+                    loss function :categorical cross entropy
+                    activation : relu and sigmod respectively
+                    10-fold cross validation
+
+
+output:             class label
+
+
+results:            find the results in the file 'initial_mlp_results.csv'
+
+not attempted:    denoising the raw signal,
+                  network not optimized for time and space complexity
+                  other attributes are not tested
+                  we can play around with no of neurons in hidden layers and extent of training
